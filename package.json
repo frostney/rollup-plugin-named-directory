@@ -1,0 +1,33 @@
+{
+  "name": "rollup-plugin-named-directory",
+  "version": "1.0.0",
+  "description": "Resolves modules to its directory names",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostney/rollup-plugin-named-directory.git"
+  },
+  "keywords": ["rollup", "plugin", "named", "directory"],
+  "author": "Johannes Stein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frostney/rollup-plugin-named-directory/issues"
+  },
+  "homepage": "https://github.com/frostney/rollup-plugin-named-directory#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
