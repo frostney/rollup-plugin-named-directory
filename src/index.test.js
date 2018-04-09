@@ -36,7 +36,10 @@ describe('Given a namedDirectory plugin', () => {
     let resolver;
 
     beforeEach(() => {
-      resolver = namedDirectory(['<dir>/<dir>Container.js', '<dir>/<dir>.js']);
+      resolver = namedDirectory({
+        matchers: ['<dir>/<dir>Container.js', '<dir>/<dir>.js'],
+        filter: name => name.indexOf('Other') === 0,
+      });
     });
 
     it('should resolve to the first match', () => {
@@ -45,6 +48,10 @@ describe('Given a namedDirectory plugin', () => {
 
     it('should resolve to the second match', () => {
       expect(resolver.resolveId('../files/Button', __filename)).toBe(path.resolve(__dirname, '../files/Button/Button.js'));
+    });
+
+    it('should filter for `Other` module', () => {
+      expect(resolver.resolveId('../files/Other', __filename)).toBe(null);
     });
 
     it('should resolve to the file itself', () => {

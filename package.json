@@ -12,7 +12,8 @@
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test jest",
     "precommit": "lint-staged",
-    "prepush": "npm test"
+    "prepush": "npm test",
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
