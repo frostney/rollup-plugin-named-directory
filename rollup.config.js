@@ -9,4 +9,3 @@ export default ['es', 'cjs'].map(format => ({
   plugins: [babel()],
   external: ['fs', 'path'],
 }));
-

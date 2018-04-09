@@ -6,11 +6,16 @@
   "module": "dist/named-directory.es.js",
   "scripts": {
     "build": "rollup -c",
+    "build:example": "rollup -c ./rollup.config.example.js",
+    "format": "prettier-eslint --print-width 80 --write \"**/*.js\"",
     "lint": "eslint . --fix",
     "test": "jest",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frostney/rollup-plugin-named-directory.git"
@@ -37,13 +42,15 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
+    "prettier-eslint-cli": "^4.7.1",
     "regenerator-runtime": "^0.11.1",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3"
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
+      "prettier-eslint --print-width 80 --write",
+      "eslint --fix",
       "git add"
     ]
   }
