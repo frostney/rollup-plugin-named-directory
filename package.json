@@ -26,7 +26,8 @@
     "rollup",
     "plugin",
     "named",
-    "directory"
+    "directory",
+    "rollup-plugin"
   ],
   "author": "Johannes Stein",
   "license": "MIT",
