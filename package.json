@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-named-directory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resolves modules to its directory names",
   "main": "dist/named-directory.cjs.js",
   "module": "dist/named-directory.es.js",
