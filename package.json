@@ -9,7 +9,7 @@
     "build:example": "rollup -c ./rollup.config.example.js",
     "format": "prettier-eslint --print-width 80 --write \"**/*.js\"",
     "lint": "eslint . --fix",
-    "pretest": "npm run test",
+    "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test jest",
     "precommit": "lint-staged",
     "prepush": "npm test"
